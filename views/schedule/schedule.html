@@ -1,0 +1,25 @@
+<h5 style="text-align: center;">Upcoming Fixtures</h5>
+
+
+<div class="scheduleList">
+  <table class="table table-striped table-hover">
+    <thead id="table-header">
+      <tr>
+        <th>Date</th>
+        <th>Game #</th>
+        <th id="teamName">Home Team</th>
+        <th>vs.</th>
+        <th id="teamName">Away Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="fixtures in schedule">
+        <td>{{fixtures.date}}</td>
+        <td>{{fixtures.matchday}}</td>
+        <td id="teamName">{{fixtures.homeTeamName}}</td>
+        <td> vs.</td>
+        <td id="teamName">{{fixtures.awayTeamName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

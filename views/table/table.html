@@ -1,0 +1,30 @@
+<h5 style="text-align: center;">Current Standings for 2016 / 2017</h5>
+
+<div class="tableList">
+  <table class="table table-striped table-hover">
+    <thead id="table-header">
+      <tr>
+        <th>Position</th>
+        <th>Team</th>
+        <th>GP</th>
+        <th>W</th>
+        <th>L</th>
+        <th>D</th>
+        <th>GD</th>
+        <th>PTS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="currentTable in table">
+        <td>{{currentTable.position}}</td>
+        <td>{{currentTable.teamName}}</td>
+        <td>{{currentTable.playedGames}}</td>
+        <td>{{currentTable.wins}}</td>
+        <td>{{currentTable.losses}}</td>
+        <td>{{currentTable.draws}}</td>
+        <td>{{currentTable.goalDifference}}</td>
+        <td>{{currentTable.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

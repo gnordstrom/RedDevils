@@ -1,0 +1,26 @@
+<h5 style="text-align: center;">Team Roster</h5>
+
+<div class="rosterList">
+  <table class="table table-striped table-hover">
+    <thead id="table-header">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Date of Birth</th>
+        <th>Nationality</th>
+        <!-- <th>Market Value</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="player in players">
+        <td>{{player.jerseyNumber}}</td>
+        <td>{{player.name}}</td>
+        <td>{{player.position}}</td>
+        <td>{{player.dateOfBirth}}</td>
+        <td>{{player.nationality}}</td>
+        <!-- <td>{{player.marketValue}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

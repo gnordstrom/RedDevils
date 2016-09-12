@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="RedDevils">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    charset="utf-8">
+       <!-- Reset CSS Sheet -->
+    <!-- <link rel="stylesheet" href="styles/base/reset.css" type="text/css"> -->
+
+    <link rel="stylesheet" href="styles/base/bootswatch-cyborg.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <title>Red Devils</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="left-side">
+      <div class="logo">
+        <img src="assets/manu-logo-cave.jpg" alt="Red Devils Logo" />
+      </div>
+        <div class="navbar">
+          <a ui-sref="home" class="btn btn-default btn-lg">Home</a>
+          <a ui-sref="results" class="btn btn-default btn-lg">Results</a>
+          <a ui-sref="roster" class="btn btn-default btn-lg">Roster</a>
+          <a ui-sref="schedule" class="btn btn-default btn-lg">Schedule</a>
+          <a ui-sref="table" class="btn btn-default btn-lg">Table</a>
+        </div>
+        <div class="links">
+          <h5>Links:</a></h5>
+          <a href="http://www.goal.com/en-gb">Goal.com</a>
+          <br>
+          <a href="http://www.skysports.com/manchester-united">Sky Sports</a>
+          <br>
+          <a href="http://www.bbc.com/sport/football/teams/manchester-united">BBC Football</a>
+          <br>
+          <a href="http://www.manutd.com">Official Website</a>
+          <br>
+          <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="header">
+          <div class="header-left">
+            <img src="assets/manutd-logo-icon.jpg" alt="Red Devils Logo" />
+          </div>
+          <div class="header-center">
+            <h3>Manchester United FC</h3>
+          </div>
+          <div class="header-right">
+            <img src="assets/manutd-logo-icon.jpg" alt="Red Devils Logo" />
+
+          </div>
+        </div>
+
+        <div class="main-content">
+          <ui-view></ui-view>
+        </div>
+      </div>
+    </div>
+
+
+   <scripts src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+   <script src="app.js"></script>
+   <!-- <script src="views/home/homeCtrl.js"></script> -->
+   <script src="views/results/resultsCtrl.js"></script>
+   <script src="views/roster/rosterCtrl.js"></script>
+   <script src="views/schedule/scheduleCtrl.js"></script>
+   <script src="views/table/tableCtrl.js"> </script>
+   <script src="services/mainSrv.js">
+   </script>
+  </body>
+</html>
