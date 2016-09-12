@@ -7,7 +7,9 @@
     <!-- <link rel="stylesheet" href="styles/base/reset.css" type="text/css"> -->
 
     <link rel="stylesheet" href="styles/base/bootswatch-cyborg.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="dist/all.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="styles/css/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/css/responsive.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <title>Red Devils</title>
   </head>
@@ -34,9 +36,17 @@
           <a href="http://www.bbc.com/sport/football/teams/manchester-united">BBC Football</a>
           <br>
           <a href="http://www.manutd.com">Official Website</a>
-          <br>
-          <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i>
+          <!-- <br> -->
+          <!-- <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i> -->
         </div>
+        <div class="rgb-game">
+          <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="clock">
+          <show-time></show-time>
+        </div>
+
       </div>
 
       <div class="right-side">
@@ -71,7 +81,11 @@
    <script src="views/roster/rosterCtrl.js"></script>
    <script src="views/schedule/scheduleCtrl.js"></script>
    <script src="views/table/tableCtrl.js"> </script>
-   <script src="services/mainSrv.js">
+   <script src="services/mainSrv.js"></script>
+   <script src="directives/clockDirective.js"></script>
+   <script src="directives/buttonDirective.js"></script>
+   <!-- <script src="dist/all.js"></script> -->
+
    </script>
   </body>
 </html>

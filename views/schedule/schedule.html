@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="fixtures in schedule">
-        <td>{{fixtures.date}}</td>
+        <td>{{fixtures.date | date : "mediumDate"}}</td>
         <td>{{fixtures.matchday}}</td>
         <td id="teamName">{{fixtures.homeTeamName}}</td>
         <td> vs.</td>

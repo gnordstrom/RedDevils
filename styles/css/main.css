@@ -27,8 +27,8 @@ body {
 }
 
 .main-wrapper {
-  height: 80vh;
-  width: 60vw;
+  height: 675px;
+  width: 850px;
   border: 10px solid #2d2c2c;
   background-color: black;
   position: fixed;
@@ -79,15 +79,14 @@ body {
   margin: 10px auto;
 }
 
-.footer {
-  margin: 20px auto 0 auto;;
+.rgb-game {
   text-align: center;
-  color: white;
-  text-decoration: none;
-  font-size: 11px;
-
+  margin-top: 30px;
 }
 
+.clock {
+  color: white;
+}
 
 /*                RIGHT SIDE               */
 .right-side {
@@ -140,6 +139,7 @@ body {
 
 .icon {
   display: inline-block;
+  margin: 10px auto;
 }
 
 .content-header {
