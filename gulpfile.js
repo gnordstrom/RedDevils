@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var babel = require('gulp-babel');
 var sass = require('gulp-sass');
 
 gulp.task('concat', function() {

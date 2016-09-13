@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="RedDevils">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"
-    charset="utf-8">
-       <!-- Reset CSS Sheet -->
-    <!-- <link rel="stylesheet" href="styles/base/reset.css" type="text/css"> -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" charset="utf-8">
     <link rel="stylesheet" href="styles/base/bootswatch-cyborg.css" media="screen" title="no title" charset="utf-8">
-    <!-- <link rel="stylesheet" href="dist/all.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="styles/css/main.css" type="text/css">
-    <link rel="stylesheet" href="styles/css/responsive.css" type="text/css">
+    <!-- <link rel="stylesheet" href="dist/all.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <title>Red Devils</title>
   </head>
@@ -17,9 +12,9 @@
   <body>
     <div class="main-wrapper">
       <div class="left-side">
-      <div class="logo">
-        <img src="assets/manu-logo-cave.jpg" alt="Red Devils Logo" />
-      </div>
+        <div class="logo">
+          <img src="assets/manu-logo-cave.jpg" alt="Red Devils Logo" />
+        </div>
         <div class="navbar">
           <a ui-sref="home" class="btn btn-default btn-lg">Home</a>
           <a ui-sref="results" class="btn btn-default btn-lg">Results</a>
@@ -36,17 +31,13 @@
           <a href="http://www.bbc.com/sport/football/teams/manchester-united">BBC Football</a>
           <br>
           <a href="http://www.manutd.com">Official Website</a>
-          <!-- <br> -->
-          <!-- <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i> -->
         </div>
         <div class="rgb-game">
           <a href="views/rgb-color-game/rgb.html"><i class="fa fa-pied-piper" aria-hidden="true"></i></a>
         </div>
-
         <div class="clock">
-          <show-time></show-time>
+          <show-time></show-time><show-weather></show-weather>
         </div>
-
       </div>
 
       <div class="right-side">
@@ -55,20 +46,17 @@
             <img src="assets/manutd-logo-icon.jpg" alt="Red Devils Logo" />
           </div>
           <div class="header-center">
-            <h3>Manchester United FC</h3>
+            <title-color title="Manchester United FC"></title-color>
           </div>
           <div class="header-right">
             <img src="assets/manutd-logo-icon.jpg" alt="Red Devils Logo" />
-
           </div>
         </div>
-
         <div class="main-content">
           <ui-view></ui-view>
         </div>
       </div>
     </div>
-
 
    <scripts src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -76,14 +64,16 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
    <script src="app.js"></script>
-   <!-- <script src="views/home/homeCtrl.js"></script> -->
+   <script src="views/home/homeCtrl.js"></script>
    <script src="views/results/resultsCtrl.js"></script>
    <script src="views/roster/rosterCtrl.js"></script>
    <script src="views/schedule/scheduleCtrl.js"></script>
    <script src="views/table/tableCtrl.js"> </script>
    <script src="services/mainSrv.js"></script>
    <script src="directives/clockDirective.js"></script>
-   <script src="directives/buttonDirective.js"></script>
+   <script src="directives/titleDirective.js"></script>
+    <script src="directives/weatherDirective.js"></script>
+   <script src="./weatherCtrl.js"></script>
    <!-- <script src="dist/all.js"></script> -->
 
    </script>

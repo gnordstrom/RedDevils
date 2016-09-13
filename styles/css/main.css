@@ -26,6 +26,7 @@ body {
   align-items: center;
 }
 
+/* App Content */
 .main-wrapper {
   height: 675px;
   width: 850px;
@@ -36,7 +37,7 @@ body {
   z-index: 2;
 }
 
-/*                LEFT SIDE               */
+                                      /* LEFT SIDE */
 .left-side {
   width: 25%;
   height: 100%;
@@ -46,27 +47,18 @@ body {
   opacity: 0.9;
 }
 
-.sidebar {
-  /*width: 200px;
-  height: 100%;
-  border-right: 10px solid #2d2c2c;
-  float: left;
-  background: black;
-  opacity: 0.8;*/
-}
-
+/* Red Devil Logo */
 .logo img {
   background-size: cover;
   width: 100%;
-  /*margin-bottom: 10px;*/
 }
+/* Nav Buttons*/
 .navbar {
   width: 100%;
   color: white;
   margin: 0px auto 5px auto;
   display: block;
 }
-
 .btn {
     padding: 10px;
     margin: 10px 5px;
@@ -74,27 +66,34 @@ body {
     justify-content: center;
 }
 
+/* Links */
 .links {
   text-align: center;
-  margin: 10px auto;
+  margin: 5px auto 0px auto;
 }
 
+/* RGB Game - Pied Pieper */
 .rgb-game {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.rgb-game a {
+  color: rgb(0, 200, 38);
 }
 
+/* Clock Directive*/
 .clock {
   color: white;
 }
 
-/*                RIGHT SIDE               */
+                                      /* RIGHT SIDE */
 .right-side {
   width: 75%;
   height: 100%;
   float: right;
 }
 
+/* Manchester United FC Header + Logo*/
 .header {
     width: 100%;
     height: 15%;
@@ -105,43 +104,17 @@ body {
     justify-content: space-around;
     margin-top: 5px;
 }
-
+/* Where the routes go*/
 .main-content {
   width: 100%;
   height: 85%;
 }
-
 .main-content h3 {
   text-align: center;
   margin-top: 19px;
 }
 
-.instagram {
-  width: 30%;
-  margin: auto;
-  float: left;
-  margin-left: 15px;
-  display: inline;
-}
-.video {
-  width: 100%;
-  text-align: center;
-  margin-top: 50px;
-  border-top: 10px solid #2d2c2c;
-  border-bottom: 10px solid #2d2c2c;
-
-}
-.footerbox {
-  color: white;
-  text-align: center;
-  padding: 5px 5px;
-}
-
-.icon {
-  display: inline-block;
-  margin: 10px auto;
-}
-
+/* Quote */
 .content-header {
   text-align: center;
   padding: 0 10px;
@@ -151,35 +124,63 @@ body {
   font-size: 15px;
 }
 
+/* Youtube Video*/
+.video {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 10px solid #2d2c2c;
+  border-bottom: 10px solid #2d2c2c;
 
+}
+/*Main Content Footer*/
+.footerbox {
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+}
+.footerbox a:focus {
+  text-decoration: none;
+}
+#footerName {
+  color: steelblue;
+  text-decoration: none;
+}
+.icon {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+/* Roster Route */
 .rosterList {
   overflow: scroll;
   height: 490px;
 }
-
 #table-header {
   background-color: rgb(187, 0, 0);
 }
-
 #teamName {
   text-align: center;
 }
 
+/* Results Route */
 .resultsList {
   overflow: scroll;
   height: 530px;
 }
 
-
+/* Table Route */
 .tableList {
   overflow: scroll;
   height: 490px;
 }
 
+/* Schedule Route */
 .scheduleList {
   overflow: scroll;
   height: 490px;
 }
+
 
 ::-webkit-scrollbar {
    display: none;

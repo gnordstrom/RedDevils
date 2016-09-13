@@ -4,7 +4,7 @@ angular.module('RedDevils', ['ui.router']).config(function($stateProvider, $urlR
   $stateProvider
   .state('home', {
     url: '/',
-    // controller: 'homeCtrl',
+    controller: 'homeCtrl',
     templateUrl: 'views/home/home.html'
   })
   .state('results', {

@@ -4,7 +4,7 @@ angular.module('RedDevils', ['ui.router']).config(function($stateProvider, $urlR
   $stateProvider
   .state('home', {
     url: '/',
-    // controller: 'homeCtrl',
+    controller: 'homeCtrl',
     templateUrl: 'views/home/home.html'
   })
   .state('results', {
@@ -30,38 +30,6 @@ angular.module('RedDevils', ['ui.router']).config(function($stateProvider, $urlR
 
 });
 
-angular.module('RedDevils').directive('buttonColor', function() {
-
-      // Directive needs to return an object.
-    function getColor() {
-      var buttonColor = ['default', 'primary', 'success', 'info', 'warning', 'danger'];
-      var index = Math.floor(Math.random() * buttonColor.length);
-      return buttonColor[index];
-    }
-
-  // return {
-  //   restrict: 'E',
-  //   scope: {
-  //     title: '@',
-  //     callback: '&'
-  //   },
-  //   link: function(scope, element, attrs) {
-  //     element.on('click', function(event){
-  //       scope.callback();
-  //       var newButton = getColor();
-  //       var targetElement = element.find('img');
-  //       targetElement.css('btn-', index);
-  //     });
-  //   },
-  //   templateUrl: './directives/buttonTemplate.html',
-  //
-  // };
-
-
-
-
-});
-
 angular.module('RedDevils').directive('showTime', function() {
   return {
     restrict: 'E',
@@ -70,6 +38,51 @@ angular.module('RedDevils').directive('showTime', function() {
       var currentTime = new Date();
       scope.time = currentTime;
     }
+  };
+});
+
+angular.module('RedDevils').directive('titleColor', function() {
+
+      // Directive needs to return an object.
+    function getColor() {
+      var titleColor = ['red', 'white', 'green', 'steelblue'];
+      var index = Math.floor(Math.random() * titleColor.length);
+      return titleColor[index];
+    }
+
+  return {
+    restrict: 'E',
+    scope: {
+      title: '@',
+      callback: '&'
+    },
+    link: function(scope, element, attrs) {
+      element.on('click', function(event){
+        scope.callback();
+        var newTitle = getColor();
+        var targetElement = element.find('h3');
+        targetElement.css('color', newTitle);
+      });
+    },
+    templateUrl: 'directives/titleTemplate.html',
+    controller: function($scope) {
+      $scope.test = 'CLICKED';
+      // console.log($scope.title);
+    }
+
+  };
+
+
+
+});
+
+angular.module('RedDevils').directive('showWeather', function() {
+  return {
+    restrict: 'E',
+    templateUrl: './directives/weatherTemplate.html',
+    link: function(scope, element, attrs) {
+    },
+    controller: '../weatherCtrl.js'
   };
 });
 
@@ -124,36 +137,24 @@ this.getSchedule = function() {
   });
 };
 
+// Weather API
+this.getWeather = function() {
+  return $http ({
+    method: 'GET',
+    url: 'https://api.forecast.io/forecast/b7ec8f629c1aca6684eb5ea682f2849d/53.463337,2.291194'
+  }).then(function(response){
+    console.log(response);
+    return response.data.currently;
+  });
+};
+
 
 });
 
 angular.module('RedDevils').controller('homeCtrl', function($scope, mainSrv){
-  $scope.
-});
-
-angular.module('RedDevils').controller('resultsCtrl', function($scope, mainSrv){
-  mainSrv.getResults().then(function(data) {
+  mainSrv.getWeather().then(function(data) {
     console.log(data);
-    // moment();
-    // console.log('moment: ', moment());
-    // console.log(moment(data[0].date).format('MMMM Do YYYY'));
-    $scope.results = data;
-  });
-});
-
-angular.module('RedDevils').controller('rosterCtrl', function($scope, mainSrv){
-  mainSrv.getRoster().then(function(data) {
-    $scope.players = data.players;
-  });
-});
-
-angular.module('RedDevils').controller('scheduleCtrl', function($scope, mainSrv){
-  mainSrv.getSchedule().then(function(data) {
-    console.log(data);
-    // moment();
-    // console.log('moment: ', moment());
-    // console.log(moment(data[0].date).format('MMMM Do YYYY'));
-    $scope.schedule = data;
+    $scope.weather = data;
   });
 });
 
@@ -275,6 +276,32 @@ function randomColor(){
 	var b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
+angular.module('RedDevils').controller('resultsCtrl', function($scope, mainSrv){
+  mainSrv.getResults().then(function(data) {
+    console.log(data);
+    // moment();
+    // console.log('moment: ', moment());
+    // console.log(moment(data[0].date).format('MMMM Do YYYY'));
+    $scope.results = data;
+  });
+});
+
+angular.module('RedDevils').controller('rosterCtrl', function($scope, mainSrv){
+  mainSrv.getRoster().then(function(data) {
+    $scope.players = data.players;
+  });
+});
+
+angular.module('RedDevils').controller('scheduleCtrl', function($scope, mainSrv){
+  mainSrv.getSchedule().then(function(data) {
+    console.log(data);
+    // moment();
+    // console.log('moment: ', moment());
+    // console.log(moment(data[0].date).format('MMMM Do YYYY'));
+    $scope.schedule = data;
+  });
+});
 
 angular.module('RedDevils').controller('tableCtrl', function($scope, mainSrv){
   mainSrv.getTable().then(function(data) {

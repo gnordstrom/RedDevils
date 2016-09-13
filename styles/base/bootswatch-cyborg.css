@@ -1101,15 +1101,15 @@ textarea {
   line-height: inherit;
 }
 a {
-  /*color: #2a9fd6;*/
   color: white;
+  /*color: rgb(158, 0, 0);*/
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  /*color: #2a9fd6;*/
   color: rgb(158, 0, 0);
-  text-decoration: underline;
+  /*color: white;*/
+  /*text-decoration: underline;*/
 }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
